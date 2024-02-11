@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="434.0" prefWidth="596.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.whatsup2.ChatController">
+   <children>
+      <Label fx:id="ContactLabel" layoutX="260.0" layoutY="6.0" text="Label">
+         <font>
+            <Font name="Bauhaus 93" size="34.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="TP" layoutX="14.0" layoutY="369.0" mnemonicParsing="false" onAction="#OnTPClick" text="Texto Plano" />
+      <RadioButton fx:id="Sim" layoutX="105.0" layoutY="369.0" mnemonicParsing="false" onAction="#OnCSClick" text="Cifrado Simetrico" />
+      <RadioButton fx:id="Asim" layoutX="226.0" layoutY="369.0" mnemonicParsing="false" onAction="#OnCAClick" text="Cifrado Asimetrico" />
+      <RadioButton fx:id="Firma" layoutX="355.0" layoutY="369.0" mnemonicParsing="false" onAction="#OnSignClick" text="Firma" />
+      <RadioButton fx:id="Sobre" layoutX="416.0" layoutY="369.0" mnemonicParsing="false" onAction="#OnSobreClick" text="Sobre" />
+      <TextField fx:id="msgField" layoutX="14.0" layoutY="336.0" prefHeight="26.0" prefWidth="506.0" />
+      <Button layoutX="534.0" layoutY="337.0" mnemonicParsing="false" onAction="#OnSendClick" text="Enviar" />
+      <VBox fx:id="Messages" layoutX="14.0" layoutY="53.0" prefHeight="272.0" prefWidth="571.0" style="-fx-background-color: white; -fx-border-color: black;" />
+      <Button layoutX="14.0" layoutY="6.0" mnemonicParsing="false" onAction="#OnReturnClick" text="&lt;">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Button>
+      <TextField fx:id="PrivateKField" layoutX="14.0" layoutY="394.0" promptText="Llave Privada" />
+      <Label fx:id="LlaveUsuario" layoutX="405.0" layoutY="398.0" prefHeight="18.0" prefWidth="182.0" text="Tu llave pública:" textAlignment="CENTER" />
+      <TextField fx:id="FraseSeguridad" layoutX="186.0" layoutY="394.0" promptText="Frase de Seguridad" />
+   </children>
+</AnchorPane>
